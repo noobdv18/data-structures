@@ -1,4 +1,5 @@
-// Implement static stack using array
+// Implement stack using an array
+// Only one stack structure is allowed 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,6 +11,7 @@ typedef struct stack
     int *array;
 } stack;
 
+// Function declarations
 stack *buildStack();
 int push(stack *inputStack);
 int pop(stack *inputStack);
@@ -23,6 +25,7 @@ int stackflag = 0;
 
 int main(void)
 {
+
     while (1)
     {
         printf("*******************************\n");
@@ -65,6 +68,8 @@ int main(void)
     return 0;
 }
 
+// Functions:
+
 stack *buildStack(void)
 {
     // User input
@@ -101,6 +106,7 @@ stack *buildStack(void)
     }
 }
 
+
 int push(stack *inputStack)
 {
     if (inputStack == NULL)
@@ -126,6 +132,7 @@ int push(stack *inputStack)
     printf("%d pushed successfully on stack.\n\n", number);
     return 0;
 }
+
 
 int pop(stack *inputStack)
 {
@@ -156,6 +163,7 @@ int pop(stack *inputStack)
     return 0;
 }
 
+
 int isFull(stack *inputStack)
 {
     if (inputStack == NULL)
@@ -173,6 +181,7 @@ int isFull(stack *inputStack)
         return 0;
     }
 }
+
 
 int isEmpty(stack *inputStack)
 {
@@ -192,6 +201,7 @@ int isEmpty(stack *inputStack)
     }
 }
 
+
 int top(stack *inputStack)
 {
     if (inputStack == NULL)
@@ -205,6 +215,7 @@ int top(stack *inputStack)
     printf("top index is %d\ntop element is %d \n\n", top, topElement);
     return topElement;
 }
+
 
 int printStack(stack *inputStack)
 {
@@ -226,6 +237,7 @@ int printStack(stack *inputStack)
     }
     return 0;
 }
+
 
 void EmptyStack(stack *inputStack)
 {
