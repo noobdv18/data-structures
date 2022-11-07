@@ -133,7 +133,6 @@ int push(stack *inputStack)
     return 0;
 }
 
-
 int pop(stack *inputStack)
 {
     if (inputStack == NULL)
@@ -163,7 +162,6 @@ int pop(stack *inputStack)
     return 0;
 }
 
-
 int isFull(stack *inputStack)
 {
     if (inputStack == NULL)
@@ -181,7 +179,6 @@ int isFull(stack *inputStack)
         return 0;
     }
 }
-
 
 int isEmpty(stack *inputStack)
 {
@@ -201,7 +198,6 @@ int isEmpty(stack *inputStack)
     }
 }
 
-
 int top(stack *inputStack)
 {
     if (inputStack == NULL)
@@ -215,7 +211,6 @@ int top(stack *inputStack)
     printf("top index is %d\ntop element is %d \n\n", top, topElement);
     return topElement;
 }
-
 
 int printStack(stack *inputStack)
 {
@@ -237,7 +232,6 @@ int printStack(stack *inputStack)
     }
     return 0;
 }
-
 
 void EmptyStack(stack *inputStack)
 {
