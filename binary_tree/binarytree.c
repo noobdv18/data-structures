@@ -2,6 +2,10 @@
 // Does not store digit more than once
 // All functions use recursion method
 
+// binary tree condition is that
+// left_child < current_node < right_child
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,28 +16,19 @@ typedef struct node
     struct node *right;
 } node;
 
-// binary tree condition is that
-// left_child < current_node < right_child
-
 int store(node *n, node *root);
 int print(node* root);
 int free_root(node* root);
 int search(int input, node* root);
 
-
-//int free_counter = 0;
-
 int main(void)
 {
-    // Get user input
-
     node *root = NULL;
     int check;
-
-    printf("Type input and hit enter for next input.\n");
-    printf("Enter any character and hit enter to indicate end of inputs.\n");
-
-    // get input and store inside tree according to conditions
+    printf("Enter number to store and hit enter for next number.\n");
+    printf("Enter any character to indicate end of inputs.\n");
+    
+    // Get user data and store it inside tree according to conditions
     while (1)
     {
         int input;
