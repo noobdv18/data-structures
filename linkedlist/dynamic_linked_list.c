@@ -12,7 +12,6 @@ typedef struct node
 
 int main(void)
 {
-    // Ask user to type any char at the end of the list.
     printf("Enter any char at the end of the list and hit enter.\n");
 
     // Initialize the linked list
