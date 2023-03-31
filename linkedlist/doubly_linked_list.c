@@ -13,7 +13,6 @@ typedef struct node
 
 int main(void)
 {
-    // Ask user to type any char at the end of the list.
     printf("Enter any char at the end of the list and hit enter.\n");
 
     // Initialize the linked list
@@ -22,6 +21,7 @@ int main(void)
     // Create an int variable to track return value of scanf which returns 0 if char entered instead of an int for %d
     // This value will be used as an indicator of end of the list
     int value;
+    
     node *tmp;
 
     while (1)
@@ -53,7 +53,7 @@ int main(void)
             // |head| -> |NULL|data|NULL|  (first Node)
 
             tmp = head;
-            // |tmp| -> |NULL|data|NULL|  (First Node)
+            // |tmp| -> |NULL|data|NULL|  (first Node)
         }
 
         // Succeding nodes
@@ -94,7 +94,8 @@ int main(void)
     printf("Enter a for ascending and d for Descending order: ");
     char order;
     char trash, trash2;
-
+    
+    // Clear the buffer
     scanf("%c%c", &trash, &trash2);
     scanf("%c", &order);
 
