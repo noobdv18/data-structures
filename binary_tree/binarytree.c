@@ -45,6 +45,7 @@ int main(void)
         if (n == NULL)
         {
             printf("Memory could not be alloted.");
+return 1;
         }
 
         n->number = input;
@@ -93,7 +94,6 @@ int store(node *n, node *root)
         if (root->left == NULL)
         {
             root->left = n;
-            return 0;
         }
         else
         {
@@ -105,7 +105,6 @@ int store(node *n, node *root)
         if (root->right == NULL)
         {
             root->right = n;
-            return 0;
         }
         else
         {
@@ -116,7 +115,6 @@ int store(node *n, node *root)
     {
         // Number already exists and not to be stored. Free allocated memory.
         free(n); 
-        return 0;
     }
 return 0;
 }
@@ -127,7 +125,10 @@ int print(node* root)
     if(root->left != NULL)
     {
         print(root->left);
-        printf("%d\n", root->number); // because root is greater than left and less than right
+        printf("%d\n", root->number); 
+
+// because root is greater than left and less than right
+
     }
     else
     {
@@ -136,7 +137,10 @@ int print(node* root)
 
     if (root->right != NULL)
     {
-        print(root->right); // right child will be root in next recursion, eventually will be printed as a root.
+        print(root->right); 
+
+// right child will be root in next recursion, eventually will be printed as a root
+
     }
 
     return 0;
